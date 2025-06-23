@@ -40,18 +40,29 @@
             color: white;
         }
         
+        /* Consistent Button Styling */
+        .btn-gold, 
+        .btn-primary,
+        .hero-section .btn-outline-light {
+            border-radius: 50px !important;
+            padding: 10px 25px !important;
+            font-weight: 600 !important;
+            transition: all 0.3s !important;
+        }
+        
         .btn-gold {
             background-color: var(--gold);
             color: var(--dark);
-            font-weight: 600;
-            padding: 10px 25px;
-            border-radius: 50px;
             border: none;
         }
         
         .btn-gold:hover {
             background-color: #e6c200;
             color: var(--dark);
+        }
+        
+        .hero-section .btn-outline-light:hover {
+            background-color: rgba(255,255,255,0.1);
         }
         
         .value-card {
@@ -125,6 +136,23 @@
             border-radius: 50px;
             font-weight: 600;
             font-size: 0.8rem;
+        }
+        
+        /* Contact Section Fixes */
+        #contact .card-body,
+        #contact .card-body h5,
+        #contact .card-body p,
+        #contact .card-body small {
+            color: white !important;
+        }
+        
+        #contact .card {
+            background-color: transparent !important;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        #contact hr {
+            background-color: var(--gold) !important;
         }
         
         .whatsapp-float {
@@ -660,4 +688,4 @@
         })
     </script>
 </body>
-</html>
+        </html>
