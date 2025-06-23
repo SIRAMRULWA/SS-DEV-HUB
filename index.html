@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Professional website development in Johannesburg - Affordable, fast, mobile-friendly websites">
-    <title>SS Dev Hub | Building Digital Excellence in Johannesburg</title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="website development in Adelaide - Professional, fast, affordable websites">
+    <title>Advanced Websites | Building Digital Excellence</title>
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome Icons -->
@@ -45,6 +45,22 @@
             font-weight: 600;
             padding: 10px 25px;
             border-radius: 50px;
+        }
+        
+        /* New class for outline button with same shape */
+        .btn-outline-gold {
+            border: 2px solid var(--gold);
+            color: var(--gold);
+            font-weight: 600;
+            padding: 10px 25px;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-outline-gold:hover {
+            background-color: var(--gold);
+            color: var(--dark);
+            border-color: var(--gold);
         }
         
         .package-card {
@@ -120,6 +136,8 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#value">Value</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
                     <li class="nav-item"><a class="nav-link" href="#packages">Packages</a></li>
                     <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
@@ -132,10 +150,10 @@
     <section class="hero-section text-center">
         <div class="container">
             <h1 class="display-4 fw-bold mb-4">Building <span class="text-gold">Digital Excellence</span></h1>
-            <p class="lead mb-5">Professional websites for Johannesburg businesses at unbeatable prices</p>
+            <p class="lead mb-5">Professional websites for Adelaide businesses at unbeatable prices</p>
             <div class="d-flex gap-3 justify-content-center">
                 <a href="#packages" class="btn btn-gold btn-lg">View Packages</a>
-                <a href="#contact" class="btn btn-outline-light btn-lg">Get a Quote</a>
+                <a href="#contact" class="btn btn-outline-gold btn-lg">Get a Quote</a>
             </div>
         </div>
     </section>
@@ -157,6 +175,36 @@
         </div>
     </section>
 
+    <!-- Value Section -->
+    <section id="value" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Our <span class="text-gold">Value Proposition</span></h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm text-center p-4">
+                        <i class="fas fa-rocket text-gold fa-2x mb-3"></i>
+                        <h5 class="card-title">Speed & Efficiency</h5>
+                        <p class="card-text">We deliver high-quality websites quickly, helping you get online faster without compromising on quality.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm text-center p-4">
+                        <i class="fas fa-wallet text-gold fa-2x mb-3"></i>
+                        <h5 class="card-title">Affordable Excellence</h5>
+                        <p class="card-text">Premium websites at budget-friendly prices, tailored to meet the needs of small businesses.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm text-center p-4">
+                        <i class="fas fa-users text-gold fa-2x mb-3"></i>
+                        <h5 class="card-title">Client-Centric Approach</h5>
+                        <p class="card-text">We prioritize your vision and provide personalized support throughout the development process.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Packages Section -->
     <section id="packages" class="py-5">
         <div class="container">
@@ -167,7 +215,7 @@
                     <div class="package-card h-100">
                         <div class="card-body p-4">
                             <h5 class="card-title">Starter Website</h5>
-                            <h3 class="text-gold my-3">R2,500</h3>
+                            <h3 class="text-gold my-3">$250</h3>
                             <hr>
                             <ul class="list-unstyled">
                                 <li class="mb-2"><i class="fas fa-check text-success me-2"></i> 3 pages</li>
@@ -191,7 +239,7 @@
                         <span class="popular-badge">POPULAR</span>
                         <div class="card-body p-4">
                             <h5 class="card-title">Standard Business</h5>
-                            <h3 class="text-gold my-3">R5,000</h3>
+                            <h3 class="text-gold my-3">$500</h3>
                             <hr>
                             <ul class="list-unstyled">
                                 <li class="mb-2"><i class="fas fa-check text-success me-2"></i> 5 pages</li>
@@ -214,7 +262,7 @@
                     <div class="package-card h-100">
                         <div class="card-body p-4">
                             <h5 class="card-title">Premium Website</h5>
-                            <h3 class="text-gold my-3">R8,000</h3>
+                            <h3 class="text-gold my-3">$800</h3>
                             <hr>
                             <ul class="list-unstyled">
                                 <li class="mb-2"><i class="fas fa-check text-success me-2"></i> 8 pages</li>
@@ -237,7 +285,7 @@
                     <div class="package-card h-100">
                         <div class="card-body p-4">
                             <h5 class="card-title">E-Commerce</h5>
-                            <h3 class="text-gold my-3">From R12,000</h3>
+                            <h3 class="text-gold my-3">From $1,200</h3>
                             <hr>
                             <ul class="list-unstyled">
                                 <li class="mb-2"><i class="fas fa-check text-success me-2"></i> 15 products</li>
@@ -258,13 +306,55 @@
         </div>
     </section>
 
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Our <span class="text-gold">Portfolio</span></h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <img src="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?ixlib=rb-4.0.3" class="card-img-top" alt="Portfolio Project 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Local Restaurant Website</h5>
+                            <p class="card-text">A modern, mobile-responsive website with online booking and menu features for an Adelaide restaurant.</p>
+                            <a href="#" class="btn btn-outline-primary">View Project</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3" class="card-img-top" alt="Portfolio Project 2">
+                        <div class="card-body">
+                            <h5 class="card-title">E-Commerce Store</h5>
+                            <p class="card-text">A fully functional online store with payment integration for a local fashion retailer.</p>
+                            <a href="#" class="btn btn-outline-primary">View Project</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3" class="card-img-top" alt="Portfolio Project 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Professional Services</h5>
+                            <p class="card-text">A sleek website for a consulting firm with lead generation features and blog integration.</p>
+                            <a href="#" class="btn btn-outline-primary">View Project</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-5">
+                <a href="#contact" class="btn btn-gold btn-lg">Start Your Project</a>
+            </div>
+        </div>
+    </section>
+
     <!-- About Section -->
     <section id="about" class="py-5 bg-light">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6 mb-4 mb-lg-0">
                     <h2 class="mb-4">About <span class="text-gold">SS Dev Hub</span></h2>
-                    <p>We're a Johannesburg-based web development company dedicated to helping small businesses establish their online presence with professional, affordable websites.</p>
+                    <p>We're an Adelaide-based web development company dedicated to helping small businesses establish their online presence with professional, affordable websites.</p>
                     <p>Our mission is to deliver high-quality websites that help our clients grow their business without breaking the bank.</p>
                     <div class="d-flex gap-3 mt-4">
                         <div>
@@ -327,21 +417,21 @@
                                 <i class="fas fa-map-marker-alt text-gold mt-1 me-3"></i>
                                 <div>
                                     <h5 class="mb-1">Location</h5>
-                                    <p class="mb-0">Johannesburg, South Africa</p>
+                                    <p class="mb-0">Adelaide, Australia</p>
                                 </div>
                             </div>
                             <div class="d-flex align-items-start mb-4">
                                 <i class="fas fa-phone text-gold mt-1 me-3"></i>
                                 <div>
                                     <h5 class="mb-1">Call Us</h5>
-                                    <p class="mb-0">083 623 6469</p>
+                                    <p class="mb-0">+61 412 345 678</p>
                                 </div>
                             </div>
                             <div class="d-flex align-items-start mb-4">
                                 <i class="fas fa-envelope text-gold mt-1 me-3"></i>
                                 <div>
                                     <h5 class="mb-1">Email Us</h5>
-                                    <p class="mb-0">mrulwasihle@gmail.com</p>
+                                    <p class="mb-0">info@ssdevhub.com</p>
                                 </div>
                             </div>
                             <hr>
@@ -361,11 +451,13 @@
             <div class="row">
                 <div class="col-md-4 mb-4 mb-md-0">
                     <h3 class="text-gold mb-3">SS Dev Hub</h3>
-                    <p>Building digital excellence for Johannesburg businesses with affordable, high-quality websites.</p>
+                    <p>Building digital excellence for Adelaide businesses with affordable, high-quality websites.</p>
                 </div>
                 <div class="col-md-4 mb-4 mb-md-0">
                     <h5 class="text-gold mb-3">Quick Links</h5>
                     <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#value" class="text-white">Value</a></li>
+                        <li class="mb-2"><a href="#portfolio" class="text-white">Portfolio</a></li>
                         <li class="mb-2"><a href="#packages" class="text-white">Packages</a></li>
                         <li class="mb-2"><a href="#about" class="text-white">About Us</a></li>
                         <li class="mb-2"><a href="#contact" class="text-white">Contact</a></li>
@@ -388,13 +480,13 @@
             </div>
             <hr class="my-4">
             <div class="text-center">
-                <p class="mb-0">&copy; 2023 SS Dev Hub. All rights reserved.</p>
+                <p class="mb-0">© 2025 SS Dev Hub. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <!-- WhatsApp Float -->
-    <a href="https://wa.me/27836236469" class="whatsapp-float" target="_blank" title="Chat on WhatsApp">
+    <a href="https://wa.me/61412345678" class="whatsapp-float" target="_blank" title="Chat on WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
 
