@@ -2,20 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
-    <meta name="description" content="website development in Adelaide - Professional, fast, affordable websites">
-    <title>Advanced Websites | Building Digital Excellence</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SS Dev Hub | Premium Web Development in Johannesburg</title>
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome Icons -->
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
             --primary: #0A2463;
             --gold: #FFD700;
             --dark: #212529;
+            --light: #f8f9fa;
         }
         
         body {
@@ -26,6 +26,7 @@
         
         .bg-primary { background-color: var(--primary)!important; }
         .text-gold { color: var(--gold)!important; }
+        .bg-light { background-color: var(--light)!important; }
         
         .navbar {
             box-shadow: 0 2px 15px rgba(0,0,0,0.1);
@@ -35,7 +36,7 @@
             background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3');
             background-size: cover;
             background-position: center;
-            padding: 120px 0;
+            padding: 150px 0;
             color: white;
         }
         
@@ -45,22 +46,60 @@
             font-weight: 600;
             padding: 10px 25px;
             border-radius: 50px;
+            border: none;
         }
         
-        /* New class for outline button with same shape */
-        .btn-outline-gold {
-            border: 2px solid var(--gold);
-            color: var(--gold);
-            font-weight: 600;
-            padding: 10px 25px;
-            border-radius: 50px;
-            transition: all 0.3s ease;
-        }
-        
-        .btn-outline-gold:hover {
-            background-color: var(--gold);
+        .btn-gold:hover {
+            background-color: #e6c200;
             color: var(--dark);
-            border-color: var(--gold);
+        }
+        
+        .value-card {
+            transition: all 0.3s ease;
+            height: 100%;
+            border-radius: 10px;
+            overflow: hidden;
+            border: none;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .value-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+        
+        .portfolio-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+        
+        .portfolio-img {
+            transition: transform 0.5s;
+            height: 250px;
+            width: 100%;
+            object-fit: cover;
+        }
+        
+        .portfolio-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(10, 36, 99, 0.9);
+            color: white;
+            padding: 20px;
+            transform: translateY(100%);
+            transition: transform 0.3s;
+        }
+        
+        .portfolio-item:hover .portfolio-overlay {
+            transform: translateY(0);
+        }
+        
+        .portfolio-item:hover .portfolio-img {
+            transform: scale(1.1);
         }
         
         .package-card {
@@ -114,7 +153,7 @@
         
         @media (max-width: 768px) {
             .hero-section {
-                padding: 80px 0;
+                padding: 100px 0;
             }
             
             .display-4 {
@@ -136,10 +175,9 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#value">Value</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#values">Values</a></li>
                     <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
                     <li class="nav-item"><a class="nav-link" href="#packages">Packages</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                 </ul>
             </div>
@@ -150,155 +188,51 @@
     <section class="hero-section text-center">
         <div class="container">
             <h1 class="display-4 fw-bold mb-4">Building <span class="text-gold">Digital Excellence</span></h1>
-            <p class="lead mb-5">Professional websites for Adelaide businesses at unbeatable prices</p>
+            <p class="lead mb-5">Professional websites for Johannesburg businesses at unbeatable prices</p>
             <div class="d-flex gap-3 justify-content-center">
                 <a href="#packages" class="btn btn-gold btn-lg">View Packages</a>
-                <a href="#contact" class="btn btn-outline-gold btn-lg">Get a Quote</a>
+                <a href="#contact" class="btn btn-outline-light btn-lg">Get a Quote</a>
             </div>
         </div>
     </section>
 
-    <!-- Trust Badges -->
-    <section class="py-4 bg-light">
+    <!-- Values Section -->
+    <section id="values" class="py-5 bg-light">
         <div class="container">
-            <div class="row text-center">
-                <div class="col-md-4 mb-3 mb-md-0">
-                    <p class="mb-0"><i class="fas fa-check-circle text-success me-2"></i> <strong>100% Satisfaction</strong></p>
-                </div>
-                <div class="col-md-4 mb-3 mb-md-0">
-                    <p class="mb-0"><i class="fas fa-bolt text-warning me-2"></i> <strong>Fast Delivery</strong></p>
-                </div>
-                <div class="col-md-4">
-                    <p class="mb-0"><i class="fas fa-headset text-primary me-2"></i> <strong>24/7 Support</strong></p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Value Section -->
-    <section id="value" class="py-5">
-        <div class="container">
-            <h2 class="text-center mb-5">Our <span class="text-gold">Value Proposition</span></h2>
+            <h2 class="text-center mb-5">Our <span class="text-gold">Core Values</span></h2>
             <div class="row g-4">
                 <div class="col-md-4">
-                    <div class="card h-100 border-0 shadow-sm text-center p-4">
-                        <i class="fas fa-rocket text-gold fa-2x mb-3"></i>
-                        <h5 class="card-title">Speed & Efficiency</h5>
-                        <p class="card-text">We deliver high-quality websites quickly, helping you get online faster without compromising on quality.</p>
+                    <div class="value-card card h-100">
+                        <div class="card-body text-center p-4">
+                            <div class="mb-4 text-gold">
+                                <i class="fas fa-bolt fa-3x"></i>
+                            </div>
+                            <h3>Speed</h3>
+                            <p>We deliver websites in days, not weeks. Our starter packages go live in just 3-4 business days with rapid turnaround times.</p>
+                        </div>
                     </div>
                 </div>
+                
                 <div class="col-md-4">
-                    <div class="card h-100 border-0 shadow-sm text-center p-4">
-                        <i class="fas fa-wallet text-gold fa-2x mb-3"></i>
-                        <h5 class="card-title">Affordable Excellence</h5>
-                        <p class="card-text">Premium websites at budget-friendly prices, tailored to meet the needs of small businesses.</p>
+                    <div class="value-card card h-100">
+                        <div class="card-body text-center p-4">
+                            <div class="mb-4 text-gold">
+                                <i class="fas fa-hand-holding-usd fa-3x"></i>
+                            </div>
+                            <h3>Affordability</h3>
+                            <p>Professional websites starting at just R2,500. We provide premium quality at small business prices without hidden costs.</p>
+                        </div>
                     </div>
                 </div>
+                
                 <div class="col-md-4">
-                    <div class="card h-100 border-0 shadow-sm text-center p-4">
-                        <i class="fas fa-users text-gold fa-2x mb-3"></i>
-                        <h5 class="card-title">Client-Centric Approach</h5>
-                        <p class="card-text">We prioritize your vision and provide personalized support throughout the development process.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Packages Section -->
-    <section id="packages" class="py-5">
-        <div class="container">
-            <h2 class="text-center mb-5">Our <span class="text-gold">Website Packages</span></h2>
-            <div class="row g-4">
-                <!-- Starter Package -->
-                <div class="col-md-6 col-lg-3">
-                    <div class="package-card h-100">
-                        <div class="card-body p-4">
-                            <h5 class="card-title">Starter Website</h5>
-                            <h3 class="text-gold my-3">$250</h3>
-                            <hr>
-                            <ul class="list-unstyled">
-                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i> 3 pages</li>
-                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Mobile-responsive</li>
-                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Contact form</li>
-                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i> 1 revision</li>
-                            </ul>
-                            <div class="text-center mt-4">
-                                <a href="#contact" class="btn btn-outline-primary w-100">Get Started</a>
+                    <div class="value-card card h-100">
+                        <div class="card-body text-center p-4">
+                            <div class="mb-4 text-gold">
+                                <i class="fas fa-users fa-3x"></i>
                             </div>
-                        </div>
-                        <div class="card-footer bg-white text-center">
-                            <small class="text-muted">Delivered in 3-4 days</small>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Standard Package -->
-                <div class="col-md-6 col-lg-3">
-                    <div class="package-card h-100 position-relative">
-                        <span class="popular-badge">POPULAR</span>
-                        <div class="card-body p-4">
-                            <h5 class="card-title">Standard Business</h5>
-                            <h3 class="text-gold my-3">$500</h3>
-                            <hr>
-                            <ul class="list-unstyled">
-                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i> 5 pages</li>
-                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i> WhatsApp integration</li>
-                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i> SEO-ready</li>
-                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i> 2 revisions</li>
-                            </ul>
-                            <div class="text-center mt-4">
-                                <a href="#contact" class="btn btn-primary w-100">Choose Plan</a>
-                            </div>
-                        </div>
-                        <div class="card-footer bg-white text-center">
-                            <small class="text-muted">Delivered in 5-7 days</small>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Premium Package -->
-                <div class="col-md-6 col-lg-3">
-                    <div class="package-card h-100">
-                        <div class="card-body p-4">
-                            <h5 class="card-title">Premium Website</h5>
-                            <h3 class="text-gold my-3">$800</h3>
-                            <hr>
-                            <ul class="list-unstyled">
-                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i> 8 pages</li>
-                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Blog/Portfolio</li>
-                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Custom animations</li>
-                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Google Analytics</li>
-                            </ul>
-                            <div class="text-center mt-4">
-                                <a href="#contact" class="btn btn-outline-primary w-100">Learn More</a>
-                            </div>
-                        </div>
-                        <div class="card-footer bg-white text-center">
-                            <small class="text-muted">Delivered in 7-10 days</small>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- E-Commerce Package -->
-                <div class="col-md-6 col-lg-3">
-                    <div class="package-card h-100">
-                        <div class="card-body p-4">
-                            <h5 class="card-title">E-Commerce</h5>
-                            <h3 class="text-gold my-3">From $1,200</h3>
-                            <hr>
-                            <ul class="list-unstyled">
-                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i> 15 products</li>
-                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Payment gateways</li>
-                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Order dashboard</li>
-                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Training included</li>
-                            </ul>
-                            <div class="text-center mt-4">
-                                <a href="#contact" class="btn btn-outline-primary w-100">Get Quote</a>
-                            </div>
-                        </div>
-                        <div class="card-footer bg-white text-center">
-                            <small class="text-muted">Delivered in 10-14 days</small>
+                            <h3>Client Focus</h3>
+                            <p>Your satisfaction is guaranteed. We include free revisions and ongoing support to ensure you love your new website.</p>
                         </div>
                     </div>
                 </div>
@@ -307,75 +241,264 @@
     </section>
 
     <!-- Portfolio Section -->
-    <section id="portfolio" class="py-5 bg-light">
+    <section id="portfolio" class="py-5">
         <div class="container">
-            <h2 class="text-center mb-5">Our <span class="text-gold">Portfolio</span></h2>
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="card h-100 border-0 shadow-sm">
-                        <img src="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?ixlib=rb-4.0.3" class="card-img-top" alt="Portfolio Project 1">
-                        <div class="card-body">
-                            <h5 class="card-title">Local Restaurant Website</h5>
-                            <p class="card-text">A modern, mobile-responsive website with online booking and menu features for an Adelaide restaurant.</p>
-                            <a href="#" class="btn btn-outline-primary">View Project</a>
+            <h2 class="text-center mb-5">Recent <span class="text-gold">Projects</span></h2>
+            <div class="row">
+                <div class="col-md-6 col-lg-4">
+                    <div class="portfolio-item">
+                        <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3" alt="Law Firm Website" class="portfolio-img">
+                        <div class="portfolio-overlay">
+                            <h3>Johannesburg Law Firm</h3>
+                            <p class="mb-2">Professional 5-page website with attorney profiles and contact forms.</p>
+                            <a href="#" class="btn btn-sm btn-gold">View Details</a>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="card h-100 border-0 shadow-sm">
-                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3" class="card-img-top" alt="Portfolio Project 2">
-                        <div class="card-body">
-                            <h5 class="card-title">E-Commerce Store</h5>
-                            <p class="card-text">A fully functional online store with payment integration for a local fashion retailer.</p>
-                            <a href="#" class="btn btn-outline-primary">View Project</a>
+                
+                <div class="col-md-6 col-lg-4">
+                    <div class="portfolio-item">
+                        <img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3" alt="E-commerce Site" class="portfolio-img">
+                        <div class="portfolio-overlay">
+                            <h3>Fashion Boutique</h3>
+                            <p class="mb-2">E-commerce platform with 25+ products and secure payment processing.</p>
+                            <a href="#" class="btn btn-sm btn-gold">View Details</a>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="card h-100 border-0 shadow-sm">
-                        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3" class="card-img-top" alt="Portfolio Project 3">
-                        <div class="card-body">
-                            <h5 class="card-title">Professional Services</h5>
-                            <p class="card-text">A sleek website for a consulting firm with lead generation features and blog integration.</p>
-                            <a href="#" class="btn btn-outline-primary">View Project</a>
+                
+                <div class="col-md-6 col-lg-4">
+                    <div class="portfolio-item">
+                        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3" alt="Construction Website" class="portfolio-img">
+                        <div class="portfolio-overlay">
+                            <h3>Construction Company</h3>
+                            <p class="mb-2">8-page website with project gallery and client testimonials.</p>
+                            <a href="#" class="btn btn-sm btn-gold">View Details</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                    <div class="portfolio-item">
+                        <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3" alt="Restaurant Website" class="portfolio-img">
+                        <div class="portfolio-overlay">
+                            <h3>Gourmet Restaurant</h3>
+                            <p class="mb-2">Interactive menu, online reservations, and food gallery.</p>
+                            <a href="#" class="btn btn-sm btn-gold">View Details</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                    <div class="portfolio-item">
+                        <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3" alt="Medical Website" class="portfolio-img">
+                        <div class="portfolio-overlay">
+                            <h3>Medical Practice</h3>
+                            <p class="mb-2">HIPAA-compliant website with patient portal integration.</p>
+                            <a href="#" class="btn btn-sm btn-gold">View Details</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                    <div class="portfolio-item">
+                        <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-4.0.3" alt="Consulting Website" class="portfolio-img">
+                        <div class="portfolio-overlay">
+                            <h3>Business Consultants</h3>
+                            <p class="mb-2">Lead-generating website with service pages and contact forms.</p>
+                            <a href="#" class="btn btn-sm btn-gold">View Details</a>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="text-center mt-5">
-                <a href="#contact" class="btn btn-gold btn-lg">Start Your Project</a>
+            
+            <div class="text-center mt-4">
+                <a href="#contact" class="btn btn-primary btn-lg px-5">Start Your Project</a>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="py-5 bg-light">
+    <!-- Packages Section -->
+    <section id="packages" class="py-5 bg-light">
         <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6 mb-4 mb-lg-0">
-                    <h2 class="mb-4">About <span class="text-gold">SS Dev Hub</span></h2>
-                    <p>We're an Adelaide-based web development company dedicated to helping small businesses establish their online presence with professional, affordable websites.</p>
-                    <p>Our mission is to deliver high-quality websites that help our clients grow their business without breaking the bank.</p>
-                    <div class="d-flex gap-3 mt-4">
-                        <div>
-                            <h3 class="text-gold">50+</h3>
-                            <p>Websites Delivered</p>
+            <h2 class="text-center mb-5">Website <span class="text-gold">Packages</span></h2>
+            <div class="row g-4">
+                <!-- Starter Package -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="package-card card h-100">
+                        <div class="card-body p-4">
+                            <h5 class="card-title">Starter Website</h5>
+                            <h3 class="text-gold my-3">R2,500</h3>
+                            <hr>
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i> 3 custom pages</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Mobile-responsive design</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Contact form</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Basic SEO setup</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i> 1 revision round</li>
+                            </ul>
+                            <div class="text-center mt-4">
+                                <a href="#contact" class="btn btn-outline-primary w-100">Get Started</a>
+                            </div>
                         </div>
-                        <div>
-                            <h3 class="text-gold">100%</h3>
-                            <p>Client Satisfaction</p>
+                        <div class="card-footer bg-white text-center">
+                            <small class="text-muted">Delivered in 3-4 business days</small>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6">
-                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3" alt="Our Team" class="img-fluid rounded shadow">
+                
+                <!-- Standard Package -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="package-card card h-100 position-relative">
+                        <span class="popular-badge">MOST POPULAR</span>
+                        <div class="card-body p-4">
+                            <h5 class="card-title">Standard Business</h5>
+                            <h3 class="text-gold my-3">R5,000</h3>
+                            <hr>
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i> 5 custom pages</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i> WhatsApp integration</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Advanced SEO setup</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Social media links</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i> 2 revision rounds</li>
+                            </ul>
+                            <div class="text-center mt-4">
+                                <a href="#contact" class="btn btn-primary w-100">Choose Plan</a>
+                            </div>
+                        </div>
+                        <div class="card-footer bg-white text-center">
+                            <small class="text-muted">Delivered in 5-7 business days</small>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Premium Package -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="package-card card h-100">
+                        <div class="card-body p-4">
+                            <h5 class="card-title">Premium Website</h5>
+                            <h3 class="text-gold my-3">R8,000</h3>
+                            <hr>
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i> 8 custom pages</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Blog/Portfolio section</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Custom animations</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Google Analytics</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i> 3 revision rounds</li>
+                            </ul>
+                            <div class="text-center mt-4">
+                                <a href="#contact" class="btn btn-outline-primary w-100">Learn More</a>
+                            </div>
+                        </div>
+                        <div class="card-footer bg-white text-center">
+                            <small class="text-muted">Delivered in 7-10 business days</small>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- E-Commerce Package -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="package-card card h-100">
+                        <div class="card-body p-4">
+                            <h5 class="card-title">E-Commerce</h5>
+                            <h3 class="text-gold my-3">From R12,000</h3>
+                            <hr>
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i> 15 product listings</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Secure payment gateways</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Order management</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Customer accounts</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Training included</li>
+                            </ul>
+                            <div class="text-center mt-4">
+                                <a href="#contact" class="btn btn-outline-primary w-100">Get Quote</a>
+                            </div>
+                        </div>
+                        <div class="card-footer bg-white text-center">
+                            <small class="text-muted">Delivered in 10-14 business days</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Client <span class="text-gold">Testimonials</span></h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <div class="mb-3 text-warning">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p class="card-text">"SS Dev Hub delivered our law firm website in just 4 days. The quality exceeded our expectations at this price point."</p>
+                            <div class="d-flex align-items-center mt-3">
+                                <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Client" class="rounded-circle me-3" width="50">
+                                <div>
+                                    <h6 class="mb-0">Sarah M.</h6>
+                                    <small class="text-muted">Attorney, Johannesburg</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <div class="mb-3 text-warning">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p class="card-text">"Our e-commerce site was up and running in 2 weeks. The team was responsive to all our requests and changes."</p>
+                            <div class="d-flex align-items-center mt-3">
+                                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Client" class="rounded-circle me-3" width="50">
+                                <div>
+                                    <h6 class="mb-0">James K.</h6>
+                                    <small class="text-muted">Boutique Owner, Sandton</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <div class="mb-3 text-warning">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <p class="card-text">"The medical practice website met all compliance requirements and has helped us attract new patients."</p>
+                            <div class="d-flex align-items-center mt-3">
+                                <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Client" class="rounded-circle me-3" width="50">
+                                <div>
+                                    <h6 class="mb-0">Dr. Ndlovu</h6>
+                                    <small class="text-muted">Medical Practitioner, Pretoria</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-5">
+    <section id="contact" class="py-5 bg-primary text-white">
         <div class="container">
             <h2 class="text-center mb-5">Get in <span class="text-gold">Touch</span></h2>
             <div class="row">
@@ -406,35 +529,37 @@
                                 Please enter your message.
                             </div>
                         </div>
-                        <button type="submit" class="btn btn-primary btn-lg w-100">Send Message</button>
+                        <button type="submit" class="btn btn-gold btn-lg w-100">Send Message</button>
                     </form>
                 </div>
                 <div class="col-lg-6">
-                    <div class="card h-100 border-0 shadow-sm">
+                    <div class="card h-100 border-0 bg-transparent">
                         <div class="card-body p-4">
                             <h3 class="mb-4">Contact Information</h3>
                             <div class="d-flex align-items-start mb-4">
                                 <i class="fas fa-map-marker-alt text-gold mt-1 me-3"></i>
                                 <div>
                                     <h5 class="mb-1">Location</h5>
-                                    <p class="mb-0">Adelaide, Australia</p>
+                                    <p class="mb-0">Johannesburg, South Africa</p>
                                 </div>
                             </div>
                             <div class="d-flex align-items-start mb-4">
                                 <i class="fas fa-phone text-gold mt-1 me-3"></i>
                                 <div>
                                     <h5 class="mb-1">Call Us</h5>
-                                    <p class="mb-0">+61 412 345 678</p>
+                                    <p class="mb-0">083 623 6469</p>
+                                    <p class="mb-0">068 333 8611</p>
                                 </div>
                             </div>
                             <div class="d-flex align-items-start mb-4">
                                 <i class="fas fa-envelope text-gold mt-1 me-3"></i>
                                 <div>
                                     <h5 class="mb-1">Email Us</h5>
-                                    <p class="mb-0">info@ssdevhub.com</p>
+                                    <p class="mb-0">mrulwasihle@gmail.com</p>
+                                    <p class="mb-0">siyabonga210222@gmail.com</p>
                                 </div>
                             </div>
-                            <hr>
+                            <hr class="bg-gold">
                             <h5 class="mb-3">Business Hours</h5>
                             <p class="mb-1"><strong>Monday - Friday:</strong> 8:00 AM - 5:00 PM</p>
                             <p class="mb-0"><strong>Saturday:</strong> 9:00 AM - 1:00 PM</p>
@@ -451,15 +576,14 @@
             <div class="row">
                 <div class="col-md-4 mb-4 mb-md-0">
                     <h3 class="text-gold mb-3">SS Dev Hub</h3>
-                    <p>Building digital excellence for Adelaide businesses with affordable, high-quality websites.</p>
+                    <p>Building digital excellence for Johannesburg businesses with affordable, high-quality websites.</p>
                 </div>
                 <div class="col-md-4 mb-4 mb-md-0">
                     <h5 class="text-gold mb-3">Quick Links</h5>
                     <ul class="list-unstyled">
-                        <li class="mb-2"><a href="#value" class="text-white">Value</a></li>
+                        <li class="mb-2"><a href="#values" class="text-white">Our Values</a></li>
                         <li class="mb-2"><a href="#portfolio" class="text-white">Portfolio</a></li>
                         <li class="mb-2"><a href="#packages" class="text-white">Packages</a></li>
-                        <li class="mb-2"><a href="#about" class="text-white">About Us</a></li>
                         <li class="mb-2"><a href="#contact" class="text-white">Contact</a></li>
                     </ul>
                 </div>
@@ -471,22 +595,22 @@
                         <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
                         <a href="#" class="text-white"><i class="fab fa-linkedin-in"></i></a>
                     </div>
-                    <p class="mb-0">Subscribe to our newsletter</p>
-                    <div class="input-group mt-2">
+                    <p class="mb-2">Subscribe to our newsletter</p>
+                    <div class="input-group">
                         <input type="email" class="form-control" placeholder="Your email">
                         <button class="btn btn-gold" type="button">Subscribe</button>
                     </div>
                 </div>
             </div>
-            <hr class="my-4">
+            <hr class="my-4 bg-secondary">
             <div class="text-center">
-                <p class="mb-0">© 2025 SS Dev Hub. All rights reserved.</p>
+                <p class="mb-0">&copy; 2023 SS Dev Hub. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <!-- WhatsApp Float -->
-    <a href="https://wa.me/61412345678" class="whatsapp-float" target="_blank" title="Chat on WhatsApp">
+    <a href="https://wa.me/27836236469" class="whatsapp-float" target="_blank" title="Chat on WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
 
