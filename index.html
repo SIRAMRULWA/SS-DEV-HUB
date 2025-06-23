@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional website development in Johannesburg - Affordable, fast, mobile-friendly websites">
+    <title>SS Dev Hub | Building Digital Excellence in Johannesburg</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0A2463;
+            --gold: #FFD700;
+            --dark: #212529;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            padding-top: 80px;
+            color: var(--dark);
+        }
+        
+        .bg-primary { background-color: var(--primary)!important; }
+        .text-gold { color: var(--gold)!important; }
+        
+        .navbar {
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+        }
+        
+        .hero-section {
+            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3');
+            background-size: cover;
+            background-position: center;
+            padding: 120px 0;
+            color: white;
+        }
+        
+        .btn-gold {
+            background-color: var(--gold);
+            color: var(--dark);
+            font-weight: 600;
+            padding: 10px 25px;
+            border-radius: 50px;
+        }
+        
+        .package-card {
+            transition: all 0.3s ease;
+            border-radius: 10px;
+            overflow: hidden;
+            border: none;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .package-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+        
+        .popular-badge {
+            position: absolute;
+            top: -10px;
+            right: 20px;
+            background: var(--gold);
+            color: var(--dark);
+            padding: 5px 15px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.8rem;
+        }
+        
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 40px;
+            right: 40px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 3px #999;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+        }
+        
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            color: #FFF;
+        }
+        
+        @media (max-width: 768px) {
+            .hero-section {
+                padding: 80px 0;
+            }
+            
+            .display-4 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">
+                <span class="text-gold">SS</span> Dev Hub
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#packages">Packages</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section text-center">
+        <div class="container">
+            <h1 class="display-4 fw-bold mb-4">Building <span class="text-gold">Digital Excellence</span></h1>
+            <p class="lead mb-5">Professional websites for Johannesburg businesses at unbeatable prices</p>
+            <div class="d-flex gap-3 justify-content-center">
+                <a href="#packages" class="btn btn-gold btn-lg">View Packages</a>
+                <a href="#contact" class="btn btn-outline-light btn-lg">Get a Quote</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Badges -->
+    <section class="py-4 bg-light">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-4 mb-3 mb-md-0">
+                    <p class="mb-0"><i class="fas fa-check-circle text-success me-2"></i> <strong>100% Satisfaction</strong></p>
+                </div>
+                <div class="col-md-4 mb-3 mb-md-0">
+                    <p class="mb-0"><i class="fas fa-bolt text-warning me-2"></i> <strong>Fast Delivery</strong></p>
+                </div>
+                <div class="col-md-4">
+                    <p class="mb-0"><i class="fas fa-headset text-primary me-2"></i> <strong>24/7 Support</strong></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Packages Section -->
+    <section id="packages" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Our <span class="text-gold">Website Packages</span></h2>
+            <div class="row g-4">
+                <!-- Starter Package -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="package-card h-100">
+                        <div class="card-body p-4">
+                            <h5 class="card-title">Starter Website</h5>
+                            <h3 class="text-gold my-3">R2,500</h3>
+                            <hr>
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i> 3 pages</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Mobile-responsive</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Contact form</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i> 1 revision</li>
+                            </ul>
+                            <div class="text-center mt-4">
+                                <a href="#contact" class="btn btn-outline-primary w-100">Get Started</a>
+                            </div>
+                        </div>
+                        <div class="card-footer bg-white text-center">
+                            <small class="text-muted">Delivered in 3-4 days</small>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Standard Package -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="package-card h-100 position-relative">
+                        <span class="popular-badge">POPULAR</span>
+                        <div class="card-body p-4">
+                            <h5 class="card-title">Standard Business</h5>
+                            <h3 class="text-gold my-3">R5,000</h3>
+                            <hr>
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i> 5 pages</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i> WhatsApp integration</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i> SEO-ready</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i> 2 revisions</li>
+                            </ul>
+                            <div class="text-center mt-4">
+                                <a href="#contact" class="btn btn-primary w-100">Choose Plan</a>
+                            </div>
+                        </div>
+                        <div class="card-footer bg-white text-center">
+                            <small class="text-muted">Delivered in 5-7 days</small>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Premium Package -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="package-card h-100">
+                        <div class="card-body p-4">
+                            <h5 class="card-title">Premium Website</h5>
+                            <h3 class="text-gold my-3">R8,000</h3>
+                            <hr>
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i> 8 pages</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Blog/Portfolio</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Custom animations</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Google Analytics</li>
+                            </ul>
+                            <div class="text-center mt-4">
+                                <a href="#contact" class="btn btn-outline-primary w-100">Learn More</a>
+                            </div>
+                        </div>
+                        <div class="card-footer bg-white text-center">
+                            <small class="text-muted">Delivered in 7-10 days</small>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- E-Commerce Package -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="package-card h-100">
+                        <div class="card-body p-4">
+                            <h5 class="card-title">E-Commerce</h5>
+                            <h3 class="text-gold my-3">From R12,000</h3>
+                            <hr>
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i> 15 products</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Payment gateways</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Order dashboard</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Training included</li>
+                            </ul>
+                            <div class="text-center mt-4">
+                                <a href="#contact" class="btn btn-outline-primary w-100">Get Quote</a>
+                            </div>
+                        </div>
+                        <div class="card-footer bg-white text-center">
+                            <small class="text-muted">Delivered in 10-14 days</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-5 bg-light">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <h2 class="mb-4">About <span class="text-gold">SS Dev Hub</span></h2>
+                    <p>We're a Johannesburg-based web development company dedicated to helping small businesses establish their online presence with professional, affordable websites.</p>
+                    <p>Our mission is to deliver high-quality websites that help our clients grow their business without breaking the bank.</p>
+                    <div class="d-flex gap-3 mt-4">
+                        <div>
+                            <h3 class="text-gold">50+</h3>
+                            <p>Websites Delivered</p>
+                        </div>
+                        <div>
+                            <h3 class="text-gold">100%</h3>
+                            <p>Client Satisfaction</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3" alt="Our Team" class="img-fluid rounded shadow">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Get in <span class="text-gold">Touch</span></h2>
+            <div class="row">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <form id="contactForm" class="needs-validation" novalidate>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Your Name</label>
+                            <input type="text" class="form-control" id="name" required>
+                            <div class="invalid-feedback">
+                                Please enter your name.
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email Address</label>
+                            <input type="email" class="form-control" id="email" required>
+                            <div class="invalid-feedback">
+                                Please enter a valid email.
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="phone" class="form-label">Phone Number</label>
+                            <input type="tel" class="form-control" id="phone">
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Your Message</label>
+                            <textarea class="form-control" id="message" rows="4" required></textarea>
+                            <div class="invalid-feedback">
+                                Please enter your message.
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-lg w-100">Send Message</button>
+                    </form>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <h3 class="mb-4">Contact Information</h3>
+                            <div class="d-flex align-items-start mb-4">
+                                <i class="fas fa-map-marker-alt text-gold mt-1 me-3"></i>
+                                <div>
+                                    <h5 class="mb-1">Location</h5>
+                                    <p class="mb-0">Johannesburg, South Africa</p>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-start mb-4">
+                                <i class="fas fa-phone text-gold mt-1 me-3"></i>
+                                <div>
+                                    <h5 class="mb-1">Call Us</h5>
+                                    <p class="mb-0">083 623 6469</p>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-start mb-4">
+                                <i class="fas fa-envelope text-gold mt-1 me-3"></i>
+                                <div>
+                                    <h5 class="mb-1">Email Us</h5>
+                                    <p class="mb-0">mrulwasihle@gmail.com</p>
+                                </div>
+                            </div>
+                            <hr>
+                            <h5 class="mb-3">Business Hours</h5>
+                            <p class="mb-1"><strong>Monday - Friday:</strong> 8:00 AM - 5:00 PM</p>
+                            <p class="mb-0"><strong>Saturday:</strong> 9:00 AM - 1:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h3 class="text-gold mb-3">SS Dev Hub</h3>
+                    <p>Building digital excellence for Johannesburg businesses with affordable, high-quality websites.</p>
+                </div>
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h5 class="text-gold mb-3">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#packages" class="text-white">Packages</a></li>
+                        <li class="mb-2"><a href="#about" class="text-white">About Us</a></li>
+                        <li class="mb-2"><a href="#contact" class="text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5 class="text-gold mb-3">Connect With Us</h5>
+                    <div class="d-flex gap-3 mb-3">
+                        <a href="#" class="text-white"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                    <p class="mb-0">Subscribe to our newsletter</p>
+                    <div class="input-group mt-2">
+                        <input type="email" class="form-control" placeholder="Your email">
+                        <button class="btn btn-gold" type="button">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="text-center">
+                <p class="mb-0">&copy; 2023 SS Dev Hub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/27836236469" class="whatsapp-float" target="_blank" title="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script>
+        // Form validation
+        (function () {
+            'use strict'
+            
+            // Fetch the form we want to apply custom Bootstrap validation styles to
+            var form = document.getElementById('contactForm')
+            
+            // Form submission handler
+            form.addEventListener('submit', function (event) {
+                if (!form.checkValidity()) {
+                    event.preventDefault()
+                    event.stopPropagation()
+                } else {
+                    event.preventDefault()
+                    alert('Thank you for your message! We will contact you soon.')
+                    form.reset()
+                    form.classList.remove('was-validated')
+                }
+                
+                form.classList.add('was-validated')
+            }, false)
+        })()
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault()
+                
+                const targetId = this.getAttribute('href')
+                if (targetId === '#') return
+                
+                const targetElement = document.querySelector(targetId)
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    })
+                }
+            })
+        })
+    </script>
+</body>
+  </html>
