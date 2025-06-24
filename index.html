@@ -525,79 +525,140 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="py-5 bg-primary text-white">
-        <div class="container">
-            <h2 class="text-center mb-5">Get in <span class="text-gold">Touch</span></h2>
-            <div class="row">
-                <div class="col-lg-6 mb-4 mb-lg-0">
-                    <form id="contactForm" class="needs-validation" novalidate>
-                        <div class="mb-3">
-                            <label for="name" class="form-label">Your Name</label>
-                            <input type="text" class="form-control" id="name" required>
-                            <div class="invalid-feedback">
-                                Please enter your name.
-                            </div>
+ <!-- Contact Section -->
+<section id="contact" class="py-5 bg-primary text-white">
+    <div class="container">
+        <h2 class="text-center mb-5">Get in <span class="text-gold">Touch</span></h2>
+        <div class="row">
+            <div class="col-lg-6 mb-4 mb-lg-0">
+                <form id="contactForm" action="send-email.php" method="POST" class="needs-validation" novalidate>
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Your Name</label>
+                        <input type="text" class="form-control" id="name" name="name" required>
+                        <div class="invalid-feedback">
+                            Please enter your name.
                         </div>
-                        <div class="mb-3">
-                            <label for="email" class="form-label">Email Address</label>
-                            <input type="email" class="form-control" id="email" required>
-                            <div class="invalid-feedback">
-                                Please enter a valid email.
-                            </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email Address</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                        <div class="invalid-feedback">
+                            Please enter a valid email.
                         </div>
-                        <div class="mb-3">
-                            <label for="phone" class="form-label">Phone Number</label>
-                            <input type="tel" class="form-control" id="phone">
+                    </div>
+                    <div class="mb-3">
+                        <label for="phone" class="form-label">Phone Number</label>
+                        <input type="tel" class="form-control" id="phone" name="phone">
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Your Message</label>
+                        <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+                        <div class="invalid-feedback">
+                            Please enter your message.
                         </div>
-                        <div class="mb-3">
-                            <label for="message" class="form-label">Your Message</label>
-                            <textarea class="form-control" id="message" rows="4" required></textarea>
-                            <div class="invalid-feedback">
-                                Please enter your message.
-                            </div>
-                        </div>
-                        <button type="submit" class="btn btn-gold btn-lg w-100">Send Message</button>
-                    </form>
+                    </div>
+                    <button type="submit" class="btn btn-gold btn-lg w-100">Send Message</button>
+                </form>
+                
+                <!-- Success message hidden by default -->
+                <div id="formSuccess" class="alert alert-success mt-3 d-none">
+                    Thank you! Your message has been sent successfully.
                 </div>
-                <div class="col-lg-6">
-                    <div class="card h-100 border-0 bg-transparent">
-                        <div class="card-body p-4">
-                            <h3 class="mb-4">Contact Information</h3>
-                            <div class="d-flex align-items-start mb-4">
-                                <i class="fas fa-map-marker-alt text-gold mt-1 me-3"></i>
-                                <div>
-                                    <h5 class="mb-1">Location</h5>
-                                    <p class="mb-0">Johannesburg, South Africa</p>
-                                </div>
+                
+                <!-- Error message hidden by default -->
+                <div id="formError" class="alert alert-danger mt-3 d-none">
+                    Oops! Something went wrong. Please try again later.
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="card h-100 border-0 bg-transparent">
+                    <div class="card-body p-4">
+                        <h3 class="mb-4">Contact Information</h3>
+                        <div class="d-flex align-items-start mb-4">
+                            <i class="fas fa-map-marker-alt text-gold mt-1 me-3"></i>
+                            <div>
+                                <h5 class="mb-1">Location</h5>
+                                <p class="mb-0">Johannesburg, South Africa</p>
                             </div>
-                            <div class="d-flex align-items-start mb-4">
-                                <i class="fas fa-phone text-gold mt-1 me-3"></i>
-                                <div>
-                                    <h5 class="mb-1">Call Us</h5>
-                                    <p class="mb-0">083 623 6469</p>
-                                    <p class="mb-0">068 333 8611</p>
-                                </div>
-                            </div>
-                            <div class="d-flex align-items-start mb-4">
-                                <i class="fas fa-envelope text-gold mt-1 me-3"></i>
-                                <div>
-                                    <h5 class="mb-1">Email Us</h5>
-                                    <p class="mb-0">mrulwasihle@gmail.com</p>
-                                    <p class="mb-0">siyabonga210222@gmail.com</p>
-                                </div>
-                            </div>
-                            <hr class="bg-gold">
-                            <h5 class="mb-3">Business Hours</h5>
-                            <p class="mb-1"><strong>Monday - Friday:</strong> 8:00 AM - 5:00 PM</p>
-                            <p class="mb-0"><strong>Saturday:</strong> 9:00 AM - 1:00 PM</p>
                         </div>
+                        <div class="d-flex align-items-start mb-4">
+                            <i class="fas fa-phone text-gold mt-1 me-3"></i>
+                            <div>
+                                <h5 class="mb-1">Call Us</h5>
+                                <p class="mb-0">083 623 6469</p>
+                                <p class="mb-0">068 333 8611</p>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-start mb-4">
+                            <i class="fas fa-envelope text-gold mt-1 me-3"></i>
+                            <div>
+                                <h5 class="mb-1">Email Us</h5>
+                                <p class="mb-0">mrulwasihle@gmail.com</p>
+                                <p class="mb-0">siyabonga210222@gmail.com</p>
+                            </div>
+                        </div>
+                        <hr class="bg-gold">
+                        <h5 class="mb-3">Business Hours</h5>
+                        <p class="mb-1"><strong>Monday - Friday:</strong> 8:00 AM - 5:00 PM</p>
+                        <p class="mb-0"><strong>Saturday:</strong> 9:00 AM - 1:00 PM</p>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
+<!-- JavaScript for form handling -->
+<script>
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    // Validate form
+    if (!this.checkValidity()) {
+        e.stopPropagation();
+        this.classList.add('was-validated');
+        return;
+    }
+    
+    // Show loading state
+    const submitBtn = this.querySelector('button[type="submit"]');
+    const originalBtnText = submitBtn.innerHTML;
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Sending...';
+    
+    // Get form data
+    const formData = new FormData(this);
+    
+    // Send data to server
+    fetch(this.action, {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            // Show success message
+            document.getElementById('formSuccess').classList.remove('d-none');
+            document.getElementById('formError').classList.add('d-none');
+            this.reset();
+            this.classList.remove('was-validated');
+        } else {
+            // Show error message
+            document.getElementById('formError').classList.remove('d-none');
+            document.getElementById('formSuccess').classList.add('d-none');
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        document.getElementById('formError').classList.remove('d-none');
+        document.getElementById('formSuccess').classList.add('d-none');
+    })
+    .finally(() => {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = originalBtnText;
+    });
+});
+</script>
     <!-- Footer -->
     <footer class="bg-dark text-white py-4">
         <div class="container">
